@@ -1,2 +1,1 @@
-# tailwindui-retell
-Tailwind UI 
+# TailwindUI Retell
