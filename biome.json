@@ -1,0 +1,46 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+	"files": {
+		"ignore": [
+			"**/dist",
+			"**/.astro",
+			"**/assets",
+			"**/public",
+			"**/__snapshots__",
+			"*.astro",
+			"*.vue",
+			"*.svelte",
+			"*.mdx",
+			"*.md",
+			"*.css",
+			"*.scss",
+			"*.svg",
+			"*.png",
+			"*.yml",
+			"*.yaml",
+			"*.DS_Store",
+			"*.keep"
+		]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noNonNullAssertion": "off"
+			}
+		}
+	},
+	"formatter": {
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": {
+			"semicolons": "asNeeded",
+			"quoteStyle": "single"
+		}
+	}
+}
