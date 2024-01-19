@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const glossaries = await getCollection('glossary')
+
+  const uniqueTags = [...new Set(glossaries.map((g) => g.data.tags).flat())]
+
+  return uniqueTags.map((tag) => {
+    const filteredGlossaries = glossaries.filter((g) =>
+      g.data.tags.includes(tag),
+    )
+
+    return {
+      params: { tag },
+      props: { glossaries: filteredGlossaries },
+    }
+  })
+}
+
+const { tag } = Astro.params
+const { glossaries } = Astro.props
+---
+
+<h1>{tag}</h1>
+{
+  glossaries.map((glossary) => (
+    <div>
+      <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
+    </div>
+  ))
+}

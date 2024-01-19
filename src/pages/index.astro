@@ -33,7 +33,9 @@ const glossaries = (await getCollection('glossary')).reduce(
         <div>
           <h2>{alphabet}</h2>
           {glossaries[alphabet].map((glossary: any) => (
-            <div>{glossary.data.title}</div>
+            <div>
+              <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
+            </div>
           ))}
         </div>
       ))

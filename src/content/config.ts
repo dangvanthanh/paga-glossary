@@ -4,6 +4,7 @@ const glossaryCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
+		slug: z.string(),
 		alphabet: z.string(),
 		tags: z.array(z.string()),
 	}),
