@@ -1,0 +1,8 @@
+---
+const { glossary } = Astro.props
+---
+
+<div>
+  <a href=`/glossary/${glossary.slug}`>{glossary.data.title}</a>
+  <div>{glossary.body}</div>
+</div>

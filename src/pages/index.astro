@@ -1,5 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
+import { css } from '../../styled-system/css'
+import { grid } from '../../styled-system/patterns'
+import Glossary from '../components/Glossary.astro'
 
 const glossaries = (await getCollection('glossary')).reduce(
   (prev: any, current: any) => {
@@ -26,17 +29,17 @@ const glossaries = (await getCollection('glossary')).reduce(
     <title>Glossary</title>
   </head>
   <body>
-    <h1>Glossary</h1>
+    <h1 class={css({ fontSize: '3xl', fontWeight: 'bold' })}>Glossary</h1>
 
     {
       Object.keys(glossaries).map((alphabet) => (
         <div>
           <h2>{alphabet}</h2>
-          {glossaries[alphabet].map((glossary: any) => (
-            <div>
-              <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
-            </div>
-          ))}
+          <div class={grid({ columns: 2 })}>
+            {glossaries[alphabet].map((glossary: any) => (
+              <Glossary glossary={glossary} />
+            ))}
+          </div>
         </div>
       ))
     }
