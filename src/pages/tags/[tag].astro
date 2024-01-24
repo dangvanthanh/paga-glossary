@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
+import Layout from '../../layouts/layout.astro'
 
 export async function getStaticPaths() {
   const glossaries = await getCollection('glossary')
@@ -22,11 +23,13 @@ const { tag } = Astro.params
 const { glossaries } = Astro.props
 ---
 
-<h1>{tag}</h1>
-{
-  glossaries.map((glossary) => (
-    <div>
-      <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
-    </div>
-  ))
-}
+<Layout title={tag}>
+  <h1>{tag}</h1>
+  {
+    glossaries.map((glossary) => (
+      <div>
+        <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
+      </div>
+    ))
+  }
+</Layout>

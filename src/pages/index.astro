@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import { css } from '../../styled-system/css'
 import { grid } from '../../styled-system/patterns'
+import Layout from '../layouts/layout.astro'
 import Glossary from '../components/Glossary.astro'
 
 const glossaries = (await getCollection('glossary')).reduce(
@@ -20,28 +21,18 @@ const glossaries = (await getCollection('glossary')).reduce(
 )
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Glossary</title>
-  </head>
-  <body>
-    <h1 class={css({ fontSize: '3xl', fontWeight: 'bold' })}>Glossary</h1>
-
-    {
-      Object.keys(glossaries).map((alphabet) => (
-        <div>
-          <h2>{alphabet}</h2>
-          <div class={grid({ columns: 2 })}>
-            {glossaries[alphabet].map((glossary: any) => (
-              <Glossary glossary={glossary} />
-            ))}
-          </div>
+<Layout title="Home">
+  <h1 class={css({ fontSize: '3xl', fontWeight: 'bold' })}>Glossary</h1>
+  {
+    Object.keys(glossaries).map((alphabet) => (
+      <div>
+        <h2>{alphabet}</h2>
+        <div class={grid({ columns: 2 })}>
+          {glossaries[alphabet].map((glossary: any) => (
+            <Glossary glossary={glossary} />
+          ))}
         </div>
-      ))
-    }
-  </body>
-</html>
+      </div>
+    ))
+  }
+</Layout>

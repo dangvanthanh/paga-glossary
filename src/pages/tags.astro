@@ -1,14 +1,17 @@
 ---
 import { getCollection } from 'astro:content'
+import Layout from '../layouts/layout.astro'
 
 const glossaries = await getCollection('glossary')
 const tags = [...new Set(glossaries.map((g) => g.data.tags).flat())]
 ---
 
-{
-  tags.map((tag) => (
-    <div>
-      <a href={`/tags/${tag}`}>#{tag}</a>
-    </div>
-  ))
-}
+<Layout title="Tags">
+  {
+    tags.map((tag) => (
+      <div>
+        <a href={`/tags/${tag}`}>#{tag}</a>
+      </div>
+    ))
+  }
+</Layout>
