@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/layout.astro'
+import Layout from '@/layouts/layout.astro'
 
 export async function getStaticPaths() {
   const glossaries = await getCollection('glossary')
@@ -8,9 +8,7 @@ export async function getStaticPaths() {
   const uniqueTags = [...new Set(glossaries.map((g) => g.data.tags).flat())]
 
   return uniqueTags.map((tag) => {
-    const filteredGlossaries = glossaries.filter((g) =>
-      g.data.tags.includes(tag),
-    )
+    const filteredGlossaries = glossaries.filter((g) => g.data.tags.includes(tag))
 
     return {
       params: { tag },

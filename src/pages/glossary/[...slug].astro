@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/layout.astro'
+import Layout from '@/layouts/layout.astro'
+import { css } from '@/styled-system/css'
 
 export async function getStaticPaths() {
   const glossaryEntries = await getCollection('glossary')
@@ -16,6 +17,25 @@ const { Content } = await entry.render()
 ---
 
 <Layout title={entry.data.title}>
-  <h1>{entry.data.title}</h1>
-  <Content />
+  <a
+    href="/"
+    class={css({
+      display: 'inline-flex',
+      alignItems: 'center',
+      color: 'gray.500',
+      textDecoration: 'none',
+      fontSize: 'sm',
+      mb: 5,
+      '&:hover': {
+        textDecoration: 'underline',
+        textUnderlineOffset: '2px',
+      },
+    })}
+  >
+    &larr; from Glossary
+  </a>
+  <h2 class={css({ fontSize: 'lg', mb: 2, fontWeight: 500 })}>{entry.data.title}</h2>
+  <div class={css({ color: 'gray.700' })}>
+    <Content />
+  </div>
 </Layout>

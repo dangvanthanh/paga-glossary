@@ -1,13 +1,9 @@
+import { glossarySchema } from './_schema'
 import { defineCollection, z } from 'astro:content'
 
 const glossaryCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		slug: z.string(),
-		alphabet: z.string(),
-		tags: z.array(z.string()),
-	}),
+	schema: glossarySchema,
 })
 
 export const collection = {

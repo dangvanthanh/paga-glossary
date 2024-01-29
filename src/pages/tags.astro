@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import Layout from '../layouts/layout.astro'
+import Layout from '@/layouts/layout.astro'
 
 const glossaries = await getCollection('glossary')
 const tags = [...new Set(glossaries.map((g) => g.data.tags).flat())]

@@ -1,8 +1,22 @@
 ---
+import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
+
 const { glossary } = Astro.props
 ---
 
-<div>
-  <a href=`/glossary/${glossary.slug}`>{glossary.data.title}</a>
-  <div>{glossary.body}</div>
+<div
+  class={flex({
+    direction: 'column',
+    borderWidth: '1px',
+    borderColor: 'gray.200',
+    rounded: 'sm',
+    p: 4,
+    h: 'full',
+  })}
+>
+  <a href=`/glossary/${glossary.slug}` class={css({ fontSize: 'lg', mb: 2, fontWeight: 500 })}
+    >{glossary.data.title}</a
+  >
+  <div class={css({ color: 'gray.700' })}>{glossary.body}</div>
 </div>
