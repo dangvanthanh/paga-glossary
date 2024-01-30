@@ -51,6 +51,16 @@ const { title, description } = Astro.props
       >
         <h1 class={css({ fontSize: '5xl', fontWeight: 'bold' })}>
           <a href="/">Glossary</a>
+          <a
+            href="/tags"
+            class={css({
+              display: 'inline-flex',
+              fontSize: 'sm',
+              color: 'gray.500',
+              fontWeight: 400,
+              transform: 'skewY(5deg)',
+            })}>Tags</a
+          >
         </h1>
       </div>
     </header>

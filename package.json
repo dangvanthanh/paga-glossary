@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
-    "@pandacss/dev": "^0.28.0",
-    "@pandacss/types": "^0.28.0",
+    "@pandacss/dev": "^0.29.0",
+    "@pandacss/types": "^0.29.0",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.13.0"
   }
