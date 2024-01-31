@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '@/layouts/layout.astro'
 import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
 
 export async function getStaticPaths() {
   const glossaries = await getCollection('glossary')
@@ -23,14 +24,27 @@ const { glossaries } = Astro.props
 ---
 
 <Layout title={tag}>
-  <h2 class={css({ fontSize: '5xl', lineHeight: 1, fontWeight: 600, mb: 5 })}>
+  <a
+    href="/"
+    class={css({
+      display: 'inline-flex',
+      alignItems: 'center',
+      color: 'gray.500',
+      textDecoration: 'none',
+      fontSize: 'sm',
+      mb: 5,
+      '&:hover': {
+        textDecoration: 'underline',
+        textUnderlineOffset: '2px',
+      },
+    })}
+  >
+    &larr; Back to Tags
+  </a>
+  <h2 class={css({ fontSize: '5xl', lineHeight: 1, fontWeight: 600, mb: 2 })}>
     {tag}
   </h2>
-  {
-    glossaries.map((glossary) => (
-      <div>
-        <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>
-      </div>
-    ))
-  }
+  <div class={flex({ direction: 'column', gap: 2 })}>
+    {glossaries.map((glossary) => <a href={`/glossary/${glossary.slug}`}>{glossary.data.title}</a>)}
+  </div>
 </Layout>

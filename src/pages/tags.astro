@@ -1,17 +1,14 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@/layouts/layout.astro'
+import { flex } from '@/styled-system/patterns'
 
 const glossaries = await getCollection('glossary')
 const tags = [...new Set(glossaries.map((g) => g.data.tags).flat())]
 ---
 
 <Layout title="Tags">
-  {
-    tags.map((tag) => (
-      <div>
-        <a href={`/tags/${tag}`}>#{tag}</a>
-      </div>
-    ))
-  }
+  <div class={flex({ gap: 2 })}>
+    {tags.map((tag) => <a href={`/tags/${tag}`}>#{tag}</a>)}
+  </div>
 </Layout>

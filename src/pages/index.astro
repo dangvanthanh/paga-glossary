@@ -24,7 +24,7 @@ const glossaries = (await getCollection('glossary')).reduce((prev: any, current:
       {
         Object.keys(glossaries).map((alphabet) => (
           <a
-            href="#"
+            href={`#${alphabet.toLowerCase()}`}
             class={css({
               fontSize: 'xl',
               fontWeight: 600,
@@ -42,6 +42,7 @@ const glossaries = (await getCollection('glossary')).reduce((prev: any, current:
       Object.keys(glossaries).map((alphabet) => (
         <div class={flex({ pos: 'relative', direction: 'column' })}>
           <h2
+          id={alphabet.toLowerCase()}
             class={css({
               pos: {
                 base: 'relative',

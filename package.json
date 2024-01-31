@@ -1,28 +1,28 @@
 {
-  "name": "glossary",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "prepare": "panda codegen",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "lint": "pnpm dlx @biomejs/biome lint ./src/**/*.ts --apply",
-    "format": "pnpm dlx @biomejs/biome format ./src/**/*.ts --write"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.1.0",
-    "astro": "^4.2.6",
-    "typescript": "^5.3.3"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.5.3",
-    "@pandacss/dev": "^0.29.0",
-    "@pandacss/types": "^0.29.0",
-    "prettier": "^3.2.4",
-    "prettier-plugin-astro": "^0.13.0"
-  }
+	"name": "glossary",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"prepare": "panda codegen",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "pnpm dlx @biomejs/biome lint ./src/**/*.ts --apply",
+		"format": "pnpm dlx @biomejs/biome format ./src/**/*.ts --write"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.4.1",
+		"@astrojs/mdx": "^2.1.1",
+		"astro": "^4.2.8",
+		"typescript": "^5.3.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@pandacss/dev": "^0.29.1",
+		"@pandacss/types": "^0.29.1",
+		"prettier": "^3.2.4",
+		"prettier-plugin-astro": "^0.13.0"
+	}
 }

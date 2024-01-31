@@ -1,6 +1,7 @@
 import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
+	lightningcss: true,
 	// Whether to use css reset
 	preflight: true,
 
