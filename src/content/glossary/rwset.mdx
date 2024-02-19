@@ -1,0 +1,7 @@
+---
+title: Remove-wins Set (RWSet)
+alphabet: R
+tags: [crdt]
+---
+
+Remove-wins set is a set datatype in which removals take precedence over additions. For example, if one replica removes and re-adds an element, while another replica concurrently removes the element, then the merged outcome is that the element is not in the set. Contrast with add-wins set.

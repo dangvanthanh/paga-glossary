@@ -1,0 +1,7 @@
+---
+title: Last Write Wins (LWW)
+alphabet: L
+tags: [crdt]
+---
+
+Last write wins is a timestamp is attached to each update, and updates with higher timestamps always overwrite values written by updates with lower timestamps. However, if a replica has already applied an update with a higher timestamp, and it subsequently receives an update with a lower timestamp, the latter update is ignored. This approach is one way of ensuring convergence.

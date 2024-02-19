@@ -1,0 +1,7 @@
+---
+title: Operation-based CRDT
+alphabet: O
+tags: [crdt]
+---
+
+Operation-based CRDT is a CRDT in which each modification of the replicated data is encoded as an operation, and operations are sent over the network. The system must ensure that operations are not lost (by resending if necessary) and that each operation is applied once (by ignoring duplicates). Operation-based CRDTs ensure that any two concurrent operations commute; that is, replicas can apply those operations in either order, and the outcome is the same.

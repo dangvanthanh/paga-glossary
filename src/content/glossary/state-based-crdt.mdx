@@ -1,0 +1,7 @@
+---
+title: State-based CRDT
+alphabet: S
+tags: [crdt]
+---
+
+State-based CRDT is CRDT in which replicas synchronise by sending each other their entire state over the network; when one replica receives such a state from another replica, it uses a merge function to combine the two states. This merge function is defined in such a way that it is commutative (i.e. merge(a,b) = merge(b,a)), associative (i.e. merge(a,merge(b,c)) = merge(merge(a,b),c)), and idempotent (i.e. merge(a,a)=a).

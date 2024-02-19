@@ -1,0 +1,7 @@
+---
+title: Tombstone
+alphabet: T
+tags: [crdt]
+---
+
+Tombstone is a special object used in some CRDTs to indicate that a value is absent (e.g. because it has been deleted). Tombstones may increase the memory consumption of a CRDT, as they continue to exist even if the corresponding data has been deleted at the application level. There are algorithms for garbage-collecting tombstones and freeing their memory.

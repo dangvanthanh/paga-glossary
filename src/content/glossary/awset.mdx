@@ -1,0 +1,7 @@
+---
+title: Add-wins set (AWSet)
+alphabet: A
+tags: [crdt]
+---
+
+Add-wins set (AWSet) is a set datatype in which additions take precedence over removals. For example, if one replica removes and re-adds an element, while another replica concurrently removes the element, then the merged outcome is that the element is in the set. Contrast with remove-wins set.
