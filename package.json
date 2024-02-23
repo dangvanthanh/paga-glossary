@@ -13,15 +13,15 @@
 		"format": "pnpm dlx @biomejs/biome format ./src/**/*.ts --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.4",
+		"@astrojs/check": "^0.5.5",
 		"@astrojs/mdx": "^2.1.1",
-		"astro": "^4.4.0",
+		"astro": "^4.4.4",
 		"typescript": "^5.3.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@pandacss/dev": "^0.31.0",
-		"@pandacss/types": "^0.31.0",
+		"@pandacss/dev": "^0.32.0",
+		"@pandacss/types": "^0.32.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0"
 	}
