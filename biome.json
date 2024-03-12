@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
 	"files": {
 		"ignore": [
 			"**/dist",
@@ -7,13 +7,6 @@
 			"**/assets",
 			"**/public",
 			"**/__snapshots__",
-			"*.astro",
-			"*.vue",
-			"*.svelte",
-			"*.mdx",
-			"*.md",
-			"*.css",
-			"*.scss",
 			"*.svg",
 			"*.png",
 			"*.yml",
