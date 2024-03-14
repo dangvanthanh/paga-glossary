@@ -9,11 +9,11 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "pnpm dlx @biomejs/biome lint ./src/**/*.ts --apply",
-		"format": "pnpm dlx @biomejs/biome format ./src/**/*.ts --write"
+		"lint": "pnpm dlx @biomejs/biome lint ./src --apply",
+		"format": "pnpm dlx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.7",
+		"@astrojs/check": "^0.5.8",
 		"@astrojs/mdx": "^2.2.0",
 		"astro": "^4.5.2",
 		"typescript": "^5.4.2"

@@ -4,7 +4,7 @@ import Layout from '@/layouts/layout.astro'
 import { flex } from '@/styled-system/patterns'
 
 const glossaries = await getCollection('glossary')
-const tags = [...new Set(glossaries.map((g) => g.data.tags).flat())]
+const tags = [...new Set(glossaries.flatMap((g) => g.data.tags))]
 ---
 
 <Layout title="Tags">

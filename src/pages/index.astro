@@ -5,17 +5,20 @@ import Layout from '@/layouts/layout.astro'
 import Glossary from '@/components/Glossary.astro'
 import { css } from '@/styled-system/css'
 
-const glossaries = (await getCollection('glossary')).reduce((prev: any, current: any) => {
-  const alphabet = current.data.alphabet
+const glossaries = (await getCollection('glossary')).reduce(
+	(prev: any, current: any) => {
+		const alphabet = current.data.alphabet
 
-  if (!prev[alphabet]) {
-    prev[alphabet] = []
-  }
+		if (!prev[alphabet]) {
+			prev[alphabet] = []
+		}
 
-  prev[alphabet].push(current)
+		prev[alphabet].push(current)
 
-  return prev
-}, {})
+		return prev
+	},
+	{},
+)
 ---
 
 <Layout title="Home">
@@ -42,7 +45,7 @@ const glossaries = (await getCollection('glossary')).reduce((prev: any, current:
       Object.keys(glossaries).map((alphabet) => (
         <div class={flex({ pos: 'relative', direction: 'column' })}>
           <h2
-          id={alphabet.toLowerCase()}
+            id={alphabet.toLowerCase()}
             class={css({
               pos: {
                 base: 'relative',
