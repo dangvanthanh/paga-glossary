@@ -47,10 +47,9 @@ const { title, description } = Astro.props
           justify: 'center',
           px: 4,
           py: 6,
-          transform: 'skewY(-5deg)',
         })}
       >
-        <h1 class={css({ fontSize: '5xl', fontWeight: 'bold' })}>
+        <h1 class={css({ fontSize: '6xl', fontWeight: 800 })}>
           <a href="/">Glossary</a>
           <a
             href="/tags"
@@ -65,7 +64,7 @@ const { title, description } = Astro.props
         </h1>
       </div>
     </header>
-    <main role="main" class={css({ my: 8 })}>
+    <main role="main" class={css({ mb: 8 })}>
       <div class={css({ maxW: '3xl', mx: 'auto', px: 4 })}>
         <slot />
       </div>

@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
-		"prepare": "panda codegen",
+		"prepare": "husky",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro check && astro build",
@@ -13,16 +13,21 @@
 		"format": "pnpm dlx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.5.8",
+		"@astrojs/check": "^0.5.9",
 		"@astrojs/mdx": "^2.2.0",
-		"astro": "^4.5.2",
+		"astro": "^4.5.6",
 		"typescript": "^5.4.2"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.1",
-		"@pandacss/dev": "^0.34.3",
-		"@pandacss/types": "^0.34.3",
+		"@pandacss/dev": "^0.36.0",
+		"@pandacss/types": "^0.36.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx,vue,astro}": ["pnpm run lint", "pnpm run format"]
 	}
 }
