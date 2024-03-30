@@ -1,6 +1,7 @@
 ---
 import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
+import { truncate } from '@/utils'
 
 const { glossary } = Astro.props
 ---
@@ -19,5 +20,5 @@ const { glossary } = Astro.props
   <a href=`/glossary/${glossary.slug}` class={css({ fontSize: 'lg', mb: 2, fontWeight: 500 })}
     >{glossary.data.title}</a
   >
-  <div class={css({ color: 'gray.700' })}>{glossary.body}</div>
+  <div class={css({ color: 'gray.700' })}>{truncate(glossary.body, 140)}</div>
 </div>
