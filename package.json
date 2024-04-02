@@ -14,14 +14,14 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.5.10",
-		"@astrojs/mdx": "^2.2.2",
-		"astro": "^4.5.12",
+		"@astrojs/mdx": "^2.2.3",
+		"astro": "^4.5.13",
 		"typescript": "^5.4.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.3",
-		"@pandacss/dev": "^0.36.1",
-		"@pandacss/types": "^0.36.1",
+		"@pandacss/dev": "^0.37.0",
+		"@pandacss/types": "^0.37.0",
 		"husky": "^9.0.11",
 		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
