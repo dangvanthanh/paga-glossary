@@ -1,33 +1,33 @@
 {
-  "name": "glossary",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "prepare": "panda codegen && husky install",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "lint": "bunx @biomejs/biome lint ./src --apply",
-    "format": "bunx @biomejs/biome format ./src --write"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/mdx": "^2.2.4",
-    "astro": "^4.5.16",
-    "typescript": "^5.4.4"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.6.4",
-    "@pandacss/dev": "^0.37.1",
-    "@pandacss/types": "^0.37.1",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,vue,astro}": ["pnpm run lint", "pnpm run format"]
-  }
+	"name": "glossary",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"prepare": "panda codegen && husky install",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "bunx @biomejs/biome lint ./src --apply",
+		"format": "bunx @biomejs/biome format ./src --write"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.10",
+		"@astrojs/mdx": "^2.2.4",
+		"astro": "^4.5.16",
+		"typescript": "^5.4.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.4",
+		"@pandacss/dev": "^0.37.2",
+		"@pandacss/types": "^0.37.2",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx,vue,astro}": ["bun run lint", "bun run format"]
+	}
 }
