@@ -38,4 +38,9 @@ const { Content } = await entry.render()
   <div class={css({ color: 'gray.700' })}>
     <Content />
   </div>
+  <div class={css({ my: 4 })}>
+    {entry.data.tags.map(tag => (
+      <a href={`/tags/${tag}`} class={css({color: 'gray.500'})}>#{tag}</a>
+    ))}
+  </div> 
 </Layout>
