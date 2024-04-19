@@ -39,7 +39,7 @@ const { Content } = await entry.render()
     <Content />
   </div>
   <div class={css({ my: 4 })}>
-    {entry.data.tags.map(tag => (
+    {entry.data.tags.map((tag: any) => (
       <a href={`/tags/${tag}`} class={css({color: 'gray.500'})}>#{tag}</a>
     ))}
   </div> 
