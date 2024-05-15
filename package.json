@@ -13,9 +13,9 @@
 		"format": "bunx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.6.0",
+		"@astrojs/check": "^0.7.0",
 		"@astrojs/mdx": "^3.0.0",
-		"astro": "^4.8.3",
+		"astro": "^4.8.4",
 		"typescript": "^5.4.5"
 	},
 	"devDependencies": {
