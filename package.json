@@ -9,21 +9,21 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "bunx @biomejs/biome lint ./src --apply",
+		"lint": "bunx @biomejs/biome lint ./src --write",
 		"format": "bunx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.7.0",
 		"@astrojs/mdx": "^3.0.1",
-		"astro": "^4.9.2",
+		"astro": "^4.9.3",
 		"typescript": "^5.4.5"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.7.3",
-		"@pandacss/dev": "^0.39.2",
-		"@pandacss/types": "^0.39.2",
+		"@biomejs/biome": "1.8.0",
+		"@pandacss/dev": "^0.40.1",
+		"@pandacss/types": "^0.40.1",
 		"lint-staged": "^15.2.5",
-		"prettier": "^3.2.5",
+		"prettier": "^3.3.1",
 		"prettier-plugin-astro": "^0.14.0"
 	},
 	"lint-staged": {
