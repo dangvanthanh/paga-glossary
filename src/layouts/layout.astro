@@ -1,13 +1,12 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
 import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
 import '@/styles/panda.css'
 import '@/styles/global.css'
 
 interface Props {
-	title: string
-	description?: string
+  title: string
+  description?: string
 }
 
 const { title, description } = Astro.props
@@ -17,7 +16,7 @@ const { title, description } = Astro.props
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{title} | Glossary</title>
+    <title>{title} - Glossary</title>
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="Software Development Glossary" />
@@ -37,7 +36,6 @@ const { title, description } = Astro.props
     <meta property="twitter:title" content="Software Development Glossary" />
     <meta name="twitter:description" content="Software Development Glossary" />
     <meta name="twitter:image" content="https://paga-glossary.vercel.app/twitter-image.png" />
-    <ViewTransitions />
   </head>
   <body>
     <header role="banner">

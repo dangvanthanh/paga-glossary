@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content'
-import { flex, grid } from '@/styled-system/patterns'
-import Layout from '@/layouts/layout.astro'
 import Glossary from '@/components/Glossary.astro'
+import Layout from '@/layouts/layout.astro'
 import { css } from '@/styled-system/css'
+import { flex, grid } from '@/styled-system/patterns'
 
 const glossaries = (await getCollection('glossary')).reduce(
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	(prev: any, current: any) => {
 		const alphabet = current.data.alphabet
 
