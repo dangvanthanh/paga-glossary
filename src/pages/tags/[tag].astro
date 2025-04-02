@@ -6,20 +6,18 @@ import { flex } from '@/styled-system/patterns'
 import { tagClasses } from '@/styles'
 
 export async function getStaticPaths() {
-	const glossaries = await getCollection('glossary')
+  const glossaries = await getCollection('glossary')
 
-	const uniqueTags = [...new Set(glossaries.flatMap((g) => g.data.tags))]
+  const uniqueTags = [...new Set(glossaries.flatMap((g) => g.data.tags))]
 
-	return uniqueTags.map((tag) => {
-		const filteredGlossaries = glossaries.filter((g) =>
-			g.data.tags.includes(tag),
-		)
+  return uniqueTags.map((tag) => {
+    const filteredGlossaries = glossaries.filter((g) => g.data.tags.includes(tag))
 
-		return {
-			params: { tag },
-			props: { glossaries: filteredGlossaries },
-		}
-	})
+    return {
+      params: { tag },
+      props: { glossaries: filteredGlossaries },
+    }
+  })
 }
 
 const { tag } = Astro.params
@@ -50,7 +48,7 @@ const { glossaries } = Astro.props
   <div class={flex({ wrap: 'wrap', gap: 2 })}>
     {
       glossaries.map((glossary) => (
-        <a class={tagClasses} href={`/glossary/${glossary.slug}`}>
+        <a class={tagClasses} href={`/glossary/${glossary.id}`}>
           {glossary.data.title}
         </a>
       ))
