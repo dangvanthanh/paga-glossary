@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const glossaryEntries = await getCollection('glossary')
 
   return glossaryEntries.map((entry) => ({
-    params: { slug: entry.id },
+    params: { id: entry.id },
     props: { entry },
   }))
 }
