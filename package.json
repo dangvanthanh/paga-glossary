@@ -15,15 +15,16 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",
-		"@astrojs/mdx": "^4.2.3",
-		"astro": "5.6.0",
-		"typescript": "^5.8.2"
+		"@astrojs/mdx": "^4.2.4",
+		"astro": "5.7.4",
+		"caniuse-lite": "^1.0.30001715",
+		"typescript": "^5.8.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@pandacss/dev": "^0.53.3",
-		"@pandacss/types": "^0.53.3",
-		"lint-staged": "^15.5.0",
+		"@pandacss/dev": "^0.53.4",
+		"@pandacss/types": "^0.53.4",
+		"lint-staged": "^15.5.1",
 		"prettier": "^3.5.3",
 		"prettier-plugin-astro": "^0.14.1"
 	},
